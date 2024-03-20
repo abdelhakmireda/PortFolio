@@ -9,8 +9,7 @@ function App() {
   return (
     <div className="container">
 
-    <Header />
-    <div className="divider"></div>
+    <Header/>
     <Hero />
     <div className="divider"></div>
     <Main/>
