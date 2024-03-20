@@ -5,9 +5,7 @@ const Header = () => {
   const [showModal, setshowModal] = useState(false);
   return (
     <header className='flex'>
-      <button onClick={() => { setshowModal(true) }} className='menu'>
-        show model
-      </button>
+      <button onClick={() => { setshowModal(true) }} className='menu icon-menu'/>
       <div />
       <nav>
         <ul className='flex'>
@@ -18,13 +16,13 @@ const Header = () => {
           <li><a href="">Contact</a></li>
         </ul>
       </nav>
-      <button>
-        reda
+      <button className='mode flex'>
+        <span className='icon-moon-o'></span>
       </button>
       {showModal && (
         <div className='fixed '>
           <ul className='modal'>
-            <li><button onClick={() => { setshowModal(false)  }}>close</button></li>
+            <li><button className="icon-close" onClick={() => { setshowModal(false)  }}/></li>
             <li><a href="">About</a></li>
             <li><a href="">Article</a></li>
             <li><a href="">Projects</a></li>

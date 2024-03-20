@@ -1,3 +1,17 @@
+/*============================
+contenu de ce fichier 
+==============================*
+1.Header Design 
+2.Button & Icon
+3.Modal == Pop Up
+4.Responsive Design (media query)
+*/
+
+
+/*============================
+1.Header Design
+==============================*
+*/
 header.flex {
     justify-content: space-between;
     padding: 0 2.4rem;
@@ -8,7 +22,7 @@ header.flex nav {
     background-color: var(--color-bgheader);
     padding: 0.77rem 1.6rem;
     border-radius: 55px;
-    box-shadow: 1px 1px 40px rgba(131, 129, 129, 0.29);
+    box-shadow: 1px 1px 40px rgba(114, 112, 112, 0.29);
 }
 
 header ul.flex {
@@ -23,7 +37,7 @@ header ul li a {
 }
 
 header ul li a:hover {
-    color: var(--color-blue);
+    color: var(--color-bleu);
     opacity: 1;
     font-size: 0.9rem;
 }
@@ -36,7 +50,43 @@ header.flex .menu {
     display: none;
 }
 
-/* Model ==pop up */
+/*============================
+2.Button & Icon
+==============================*
+*/
+
+header button.menu ,header button.mode
+{
+background-color: var(--color-bgheader);
+height:2.4rem ;
+width: 2.4rem ;
+border-radius: 50%;
+justify-content:center ;
+text-align: center;
+color: var(--color-subtitle);
+border: 1px solid rgba(244, 165, 96, 0.249);
+transition: 0.2s;
+}
+header button.menu, header button.mode:hover{
+    color: var(--color-title);
+    border: 1px solid rgba(244, 165, 96, 0.8);
+}
+header .icon-close{
+    font-size: 1.3rem;
+    color: var(--color-title);
+    transition: 0.3s;
+    
+}
+header .icon-close:hover {
+    font-size: 1.5rem;
+    color: crimson;
+    rotate: 180deg;
+}
+
+/*============================
+3.Modal==Pop Up
+==============================*
+*/
 header .fixed {
     position: fixed;
     inset: 0;
@@ -52,7 +102,7 @@ header .fixed {
 
 header .fixed ul.modal {
     animation: mymove 0.7s 1;
-    width: 85%;
+    width: 75%;
     scale:1;
     margin-left: auto;
     margin-right: auto;
@@ -80,8 +130,13 @@ header .fixed ul.modal li:first-child {
     border: none;
     padding-bottom:0;
     padding-top: 0.2rem;
+    margin-bottom: -1rem;
 }
 
+/*============================
+4.Responsive Design (media query)
+==============================*
+*/
 @media (max-width:1000px) {
     header.flex nav {
         display: none;
