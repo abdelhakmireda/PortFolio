@@ -92,6 +92,7 @@ header .fixed {
     inset: 0;
     z-index: 11;
     background-color: rgba(40, 40, 48, 0.9);
+    backdrop-filter: blur(2px);
 }
 
 @keyframes mymove {
