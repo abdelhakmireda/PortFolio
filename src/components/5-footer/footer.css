@@ -1,4 +1,31 @@
-footer{
-    position: relative;
-    z-index: 5;
+footer.flex{
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+footer.flex ul{
+    gap: 1rem;
+}
+footer.flex ul a {
+    color: var(--color-subtitle);
+    transition: 0.2s;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+footer.flex ul a:hover {
+    color: var(--color-bleu);
+    font-size: 1rem;
+    font-weight: 400;
+}
+footer.flex p{
+    color: rgb(113 113 122);
+}
+/*============================
+3.responsive Design(media query)
+==============================*
+*/
+@media (max-width:800px) {
+    footer.flex{
+        flex-direction: column;
+    }
+
 }
