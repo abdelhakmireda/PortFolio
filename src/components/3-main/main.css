@@ -30,6 +30,10 @@ main section.left-section.flex button{
     border-radius: 5px;
     transition: 0.3s;
 }
+.light main section.left-section.flex button:hover{
+    border: 1px solid rgba(0, 8, 14, 0.3);
+
+}
 main section.left-section.flex button.active{
     opacity: 1;
     border: 1px solid var(--color-bleu);
@@ -46,19 +50,24 @@ main section.left-section.flex button:hover{
 ==============================*
 */
 main section.right-section{
-    /* flex-grow: 1; */
+    flex-grow: 1;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 2rem;
 }
 .card{
+    box-shadow: -1px 1px 1px rgb(0,0,0,0.3),1px 1px 1px rgb(0, 0, 0, 0.3);
     border: 1px solid rgb(93,188,252,0.3);
     border-radius: 5px;
     transition: 0.3s;
 }
+.light .card ,.light .card:hover{
+    border: none;
+}
 .card:hover {
     border: 1px solid var(--color-bleu);
+    background-color: rgba(104, 102, 102, 0.2);
     rotate: 1deg;
     scale: 1.02;
     cursor: pointer;
@@ -71,6 +80,7 @@ main section.right-section{
 }
 .card .box .title{
     color: var(--color-title);
+    text-transform: capitalize;
 }
 .card .box .subtitle {
     color: var(--color-subtitle);

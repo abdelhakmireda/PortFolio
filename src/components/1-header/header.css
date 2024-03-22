@@ -66,10 +66,14 @@ text-align: center;
 color: var(--color-subtitle);
 border: 1px solid rgba(244, 165, 96, 0.249);
 transition: 0.2s;
+box-shadow: 1px 1px 60px rgb(35,35,36,0.5);
 }
 header button.menu, header button.mode:hover{
     color: var(--color-title);
     border: 1px solid rgba(244, 165, 96, 0.8);
+}
+header .icon-sun{
+    color: orange;
 }
 header .icon-close{
     font-size: 1.3rem;

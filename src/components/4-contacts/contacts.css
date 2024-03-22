@@ -27,20 +27,32 @@ section.contact-us #email,section.contact-us #message{
     transition: 0.3s;
     font-size: 1.1rem;
 }
+.light section.contact-us #email,.light section.contact-us #message{
+    background: #dfdede7a;
+    color:#232324;
+    border: 1px solid rgba(128,128,128,0.5);
+    box-shadow: 1px 1px 1px rgba(73,73,75,0.3);
+}
 section.contact-us #email {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
+    padding: 7px;
 
 }
 section.contact-us #message{
     min-height: 9rem;
     resize: vertical;
 }
-section.contact-us #email:hover, section.contact-us #message:hover{
+section.contact-us #email:hover, section.contact-us #message:hover,section.contact-us #email:focus,
+section.contact-us #message:focus{
     border: 1px solid var(--color-bleu);
 }
-section.contact-us #email:focus, section.contact-us #message:focus{
-    border: 1px solid var(--color-bleu);
+.light section.contact-us #email:hover,
+.light section.contact-us #message:hover,
+.light section.contact-us #email:focus,
+.light section.contact-us #message:focus {
+    border: 1px solid rgb(70,70,70);
 }
+
 section.contact-us .submit{
     background-color: rgba(36,37,46,1);
     padding: 0.75rem 2rem;
