@@ -17,18 +17,19 @@ useEffect(()=>{
 })
 const [showScrollButton,setshowScrollButton] = useState(false);
   return (
-    <div id="up" className="container">
+    <div id="header" className="container">
 
     <Header/>
+      <div id="hero" className=""></div>
     <Hero />
-    <div className="divider"></div>
+    <div id="main"className="divider"></div>
     <Main/>
-    <div className="divider"></div>
+      <div id="contact" className="divider"></div>
     <Contacts />
-    <div className="divider"></div>
-    <Footer />
+      <div id="footer" className="divider"></div>
+    <Footer/>
 
-      <a style={{ opacity: showScrollButton ? 1:0, transition: " 0.5s" }} href="#up">
+      <a style={{ opacity: showScrollButton ? 1:0, transition: " 0.5s" }} href="#header ">
       <button className="scrole-to-top icon-keyboard_arrow_up"></button>
     </a>
     

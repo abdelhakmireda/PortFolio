@@ -20,7 +20,7 @@ section.contact-us #email,section.contact-us #message{
     all : unset;
     background-color: rgba(63, 63, 70, 0.15);
     border: 1px solid rgb(63, 63, 70);
-    width: 16rem;
+    width: 20rem;
     margin: 0.5rem 1rem;
     padding-left: 1rem ;
     border-radius: 5px;
@@ -71,6 +71,12 @@ section.contact-us .submit:hover{
 3.responsive Design(media query)
 ==============================*
 */
+@media (min-width:1440px) {
+   section.contact-us #email,section.contact-us #message{ width: 35rem;}
+}
+@media (max-width:1250px) {
+    section.contact-us .contact-animation{display: none;}
+}
 @media (max-width:600px) {
     section.contact-us .animation{
         display: none;
@@ -94,4 +100,12 @@ section.contact-us .submit:hover{
         width: 30%;
         align-self: center;
     }
+}
+/*============================
+4.animation lottie
+==============================*
+*/
+section.contact-us .animation{
+    width: 100%;
+    translate: 100px -25px;
 }

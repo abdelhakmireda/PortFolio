@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './main.css';
+import { AnimatePresence, motion } from "framer-motion"
 
 const myProjets = [
   {
@@ -38,15 +39,16 @@ function main() {
   const [currentActive, setcurrentActive] = useState("all");
   const [arr, setarr] = useState(myProjets);
   const handleClick = (buttonCategory) => {
-    setcurrentActive(buttonCategory);
-    if (buttonCategory === "all") {
+    const lowerCaseCategory = buttonCategory.toLowerCase();
+    setcurrentActive(lowerCaseCategory);
+    if (lowerCaseCategory === "all") {
       // Si le bouton "All Projects" est cliqué, réinitialiser arr avec myProjets
       setarr(myProjets);
     } else {
       // Sinon, filtrer les projets en fonction de la catégorie
       const newArr = myProjets.filter((item) => {
         // Convertir la catégorie en minuscules pour ignorer la casse
-        return item.category.toLowerCase() === buttonCategory.toLowerCase();
+        return item.category.toLowerCase() === lowerCaseCategory;
       });
       setarr(newArr);
     }
@@ -61,26 +63,33 @@ function main() {
         <button onClick={() => { handleClick("Reactjs") }} className={currentActive === 'Reactjs' ? 'active' : null}>Reactjs</button>
       </section>
       <section className='flex right-section'>
-        {arr.map((item) => {
-          return (
-            <article key={item.imagePath} className='card'>
-              <img src={item.imagePath} alt="" />
-              <div className='box'>
-                <h1 className='title'>{item.Project_title}</h1>
-                <p className='subtitle'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In obcaecati labore quos perferendis perspiciatis dicta consequatur fuga porro. Adipisci fuga consequatur excepturi quae necessitatibus quisquam illo ipsa ipsum. Aperiam, mollitia.</p>
-                <div className="flex icons">
-                  <div className='flex'>
-                    <div className="icon-link"></div>
-                    <div className='icon-github'></div>
+        <AnimatePresence>
+          {arr.map((item) => {
+            return (
+              <motion.article
+                layout
+                initial={{ transform: "scale(0)" }}
+                animate={{ transform: "scale(1)" }}
+                transition={{type:"spring",damping:8,stiffness:50}}
+                key={item.imagePath} className='card'>
+                <img src={item.imagePath} alt="" />
+                <div className='box'>
+                  <h1 className='title'>{item.Project_title}</h1>
+                  <p className='subtitle'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In obcaecati labore quos perferendis perspiciatis dicta consequatur fuga porro. Adipisci fuga consequatur excepturi quae necessitatibus quisquam illo ipsa ipsum. Aperiam, mollitia.</p>
+                  <div className="flex icons">
+                    <div className='flex'>
+                      <div className="icon-link"></div>
+                      <div className='icon-github'></div>
+                    </div>
+                    <a className="link flex" href="">
+                      more <span className='icon-arrow-right'></span>
+                    </a>
                   </div>
-                  <a className="link flex" href="">
-                    more <span className='icon-arrow-right'></span>
-                  </a>
                 </div>
-              </div>
-            </article>
-          )
-        })}
+              </motion.article>
+            )
+          })}
+        </AnimatePresence>
       </section>
     </main>
   )

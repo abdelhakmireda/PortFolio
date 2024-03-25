@@ -9,7 +9,7 @@ function Footer() {
         <li><a href="">Speaking</a></li>
         <li><a href="">Uses</a></li>
       </ul>
-      <p>copiright</p>
+      <p>© Reda Abdelhakmi</p>
     </footer>
   )
 }

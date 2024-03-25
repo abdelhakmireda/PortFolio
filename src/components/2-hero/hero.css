@@ -25,20 +25,21 @@ section.hero .icon-verified{
 }
 
 section.hero .avatar{
-    width: 88px;
+    width: 150px;
     border-radius: 50%;
     border: 1px solid var(--color-bleu);
     padding: 2px;
     margin-right: 0.5rem;
 }
 section.hero h1.title{
-    font-size: 2.85rem;
+    font-size: 2.6rem;   
     line-height: 3.3rem;
     margin: 24px 0;
     color: var(--color-title);
 }
  section.hero p.sub-title{
     color: var(--color-subtitle);
+    text-align: justify;
     font-size: 0.9rem;
     line-height: 1.6rem;
     margin-bottom: 32px;
@@ -57,19 +58,22 @@ section.hero div.all-icons .icon:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*============================
 2.right section =>animation
 ==============================*
 */
+section.hero .animation {
+    width: 300%;
+    translate: 60px 50px;
+}
+
+@media (min-width:1440px) {
+   section.hero .animation {
+    width: 150%;
+    translate: 100px 10px;
+}}
+@media (max-width:1000px) {
+    section.hero .animation {
+        display: none;
+    }
+}
