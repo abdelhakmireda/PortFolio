@@ -44,14 +44,14 @@ section.hero h1.title{
     line-height: 1.6rem;
     margin-bottom: 32px;
  }
-section.hero div.all-icons{
-    font-size: 1.2rem;
-    gap: 1.5rem;
+section.hero div.all-icons,section.hero #icon{
+    font-size: 1.5rem;
+    gap: 2.3rem;
     color: var(--color-subtitle);
     transition: 0.3s;
 }
-section.hero div.all-icons .icon:hover {
-    font-size: 1.3rem;
+section.hero div.all-icons #icon:hover {
+    font-size: 1.4rem;
     transition: 0.2s;
     cursor: pointer;
     color: var(--color-icons-hover);
