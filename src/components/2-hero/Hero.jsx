@@ -27,8 +27,8 @@ const Hero = () => {
           
            </p>
         <div className=" all-icons flex">
-          <a href="mailto:abdelhakmireda@gmail.com?subject=Developpeur FullStack(Symfony/React)" className=" icon-envelope" id='icon'> </a>
-          <a href="https://github.com/abdelhakmireda" className=" icon-github" id='icon' title='Télechargé Mon Cv'> </a>
+          <a href="mailto:abdelhakmireda@gmail.com?subject=Developpeur FullStack(Symfony/React)" className=" icon-envelope" id='icon' title='Envoié Moi'> </a>
+          <a href="https://github.com/abdelhakmireda" className=" icon-github" id='icon' title='Github'> </a>
           <a href="https://www.linkedin.com/in/reda-abdelhakmi-4146371b3/" className=" icon-linkedin" id='icon' title='Linkedin'> </a>
           <a href="../../../public/abdelhakmireda.pdf" target='_blank' className="icon-cloud-download" id='icon' title='Télechargé Mon Cv'> </a>
         </div>
