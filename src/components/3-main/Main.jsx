@@ -72,7 +72,7 @@ function main() {
                 animate={{ transform: "scale(1)" }}
                 transition={{type:"spring",damping:8,stiffness:50}}
                 key={item.imagePath} className='card'>
-                <img src={item.imagePath} alt="" />
+                <img src={item.imagePath} alt="" loading="lazy" />
                 <div className='box'>
                   <h1 className='title'>{item.Project_title}</h1>
                   <p className='subtitle'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In obcaecati labore quos perferendis perspiciatis dicta consequatur fuga porro. Adipisci fuga consequatur excepturi quae necessitatibus quisquam illo ipsa ipsum. Aperiam, mollitia.</p>
