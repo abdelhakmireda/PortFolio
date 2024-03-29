@@ -31,7 +31,7 @@ const Hero = () => {
           <a href="mailto:abdelhakmireda@gmail.com?subject=Développeur FullStack(Symfony/React)" className="icon-envelope" id='icon' title='Contactez-moi'> </a>
           <a href="https://github.com/abdelhakmireda" className="icon-github" id='icon' title='Github'> </a>
           <a href="https://www.linkedin.com/in/reda-abdelhakmi-4146371b3/" className="icon-linkedin" id='icon' title='Linkedin'> </a>
-          <a href="../../../public/abdelhakmireda.pdf" target='_blank' className="icon-cloud-download" id='icon' title='Télécharger Mon Cv'> </a>
+          <a href="./abdelhakmireda.pdf" target='_blank' className="icon-cloud-download" id='icon' title='Télécharger Mon Cv'> </a>
         </div>
       </div>
       <div className='right-section animation'>
