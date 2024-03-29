@@ -1,11 +1,32 @@
-import { useForm, ValidationError } from '@formspree/react';
+
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import { useForm } from '@formspree/react';
 import './contacts.css';
 import Lottie from 'lottie-react';
 import doneAnimation from '../../../public/animations/done.json';
-import contactAnimation from '../../../public/animations/contact.json'
+import contactAnimation from '../../../public/animations/contact.json';
 
 function Contacts() {
-  const [state, handleSubmit] = useForm("myyrdvzp");
+  const [state, handleSubmitFormspree] = useForm("myyrdvzp");
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const validationSchema = Yup.object().shape({
+    email: Yup.string().email('Adresse e-mail invalide').required('Veuillez saisir votre adresse e-mail'),
+    message: Yup.string().required('Veuillez saisir votre message')
+  });
+
+  const handleSubmit = async (values, actions) => {
+    // Soumission du formulaire avec Formspree
+    await handleSubmitFormspree(values);
+    actions.resetForm(); // Réinitialisation du formulaire après la soumission
+
+    // Afficher le message de succès et réinitialiser après 3 secondes
+    setIsSuccess(true);
+    setTimeout(() => {
+      setIsSuccess(false);
+    }, 3000);
+  };
 
   return (
     <section className='contact-us'>
@@ -14,46 +35,61 @@ function Contacts() {
         Contactez-nous
       </h1>
       <p className='subtitle'>
-        Contactez-nous pour plus d'informations reda abdelhakmi reda oupsi
+        Contactez-moi pour plus d'informations sur Reda Abdelhakmi
       </p>
       <div className=" flex">
-        <form onSubmit={handleSubmit} className=''>
-          <div className='flex'>
-            <label htmlFor="email">Adresse e-mail :</label>
-            <input autoComplete="off" type="email" id="email" name='email' />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
+        {isSuccess ? (
+          <div className='lottie flex'>
+            <Lottie // animation
+              loop={false}
+              style={{ height: 150 }}
+              animationData={doneAnimation}
             />
+            <h1>Votre message a été envoyé avec succès !</h1>
           </div>
-          <div className='flex'>
-            <label htmlFor="message">Votre message :</label>
-            <textarea required name="message" id="message"></textarea>
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
-          </div>
-          <button type="submit" disabled={state.submitting} className='submit'>
-            {state.submitting ? "Envoi en cours ..." : "Envoyer"}
-          </button>
-          {state.succeeded && (
-            <p className='lottie flex'>
-              <Lottie // animation
-                loop={false} // définir loop sur false pour une lecture unique
-                style={{height:150}}
-                animationData={doneAnimation}
-              />
-              <h1>Votre message a été envoyé avec succès !</h1>
-            </p>
-          )}
-        </form>
+        ) : (
+          <Formik
+            initialValues={{ email: '', message: '' }}
+            onSubmit={handleSubmit}
+            validationSchema={validationSchema}
+          >
+            {(formikProps) => (
+              <Form>
+                <div className='form-group'>
+                  <label htmlFor="email">Adresse e-mail :</label>
+                  <Field
+                    type="email"
+                    id="email"
+                    name="email"
+                    autoComplete="off"
+                    placeholder="Adresse e-mail"
+                    onBlur={formikProps.handleBlur}
+                  />
+                  <ErrorMessage name="email" component="div" className="error-message" />
+                </div>
+                <div className='form-group'>
+                  <label htmlFor="message">Votre message :</label>
+                  <Field
+                    as="textarea"
+                    id="message"
+                    name="message"
+                    placeholder="Votre message"
+                    onBlur={formikProps.handleBlur}
+                  />
+                  <ErrorMessage name="message" component="div" className="error-message" />
+                </div>
+                <button type="submit" disabled={!formikProps.isValid || formikProps.isValidating} className='submit'>
+                  {state.submitting || formikProps.isSubmitting ? "Envoi en cours ..." : "Envoyer"}
+                </button>
+              </Form>
+            )}
+          </Formik>
+        )}
+
         <div className="animation">
-          <Lottie // animation
-          className="contact-animation"
-            style={{ height: 360}}
+          <Lottie
+            className="contact-animation"
+            style={{ height: 360 }}
             animationData={contactAnimation}
           />
         </div>

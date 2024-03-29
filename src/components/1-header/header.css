@@ -190,3 +190,8 @@ header .fixed ul.modal li:first-child {
         display: block;
     }
 }
+@media (max-width:600px) {
+    header.flex {
+        padding: 0px
+    }
+}

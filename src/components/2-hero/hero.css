@@ -56,7 +56,17 @@ section.hero div.all-icons #icon:hover {
     cursor: pointer;
     color: var(--color-icons-hover);
 }
-
+@media (max-width:768px) {
+    section.hero h1.title {
+        font-size: 2rem;
+        color: var(--color-title);
+    }
+}
+@media (max-width:768px) {
+    section.hero .left-section {
+        margin:24px;
+    }
+}
 
 /*============================
 2.right section =>animation
@@ -76,4 +86,5 @@ section.hero .animation {
     section.hero .animation {
         display: none;
     }
+    
 }
