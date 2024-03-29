@@ -1,4 +1,3 @@
-
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useForm } from '@formspree/react';
@@ -6,6 +5,7 @@ import './contacts.css';
 import Lottie from 'lottie-react';
 import doneAnimation from '../../../public/animations/done.json';
 import contactAnimation from '../../../public/animations/contact.json';
+import React, { useState } from 'react'; // Importez React et useState
 
 function Contacts() {
   const [state, handleSubmitFormspree] = useForm("myyrdvzp");
@@ -37,7 +37,7 @@ function Contacts() {
       <p className='subtitle'>
         Contactez-moi pour plus d'informations sur Reda Abdelhakmi
       </p>
-      <div className=" flex">
+      <div className="flex">
         {isSuccess ? (
           <div className='lottie flex'>
             <Lottie // animation
