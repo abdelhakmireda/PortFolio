@@ -4,52 +4,91 @@ import { AnimatePresence, motion } from "framer-motion"
 
 const myProjets = [
   {
-    "Project_title": "Projet 1",
-    "category": "css",
-    "languages": ["HTML", "CSS", "JavaScript"],
-    "imagePath": "./test.jpg"
+    "Project_title": "Administration de Superviseur KVM",
+    "category": "Virtualisation",
+    "languages": ["Linux", "KVM", "Python", "Virtualisation"],
+    "description": "Modélisation d'une application web pour l'administration d'un superviseur KVM.",
+    "imagePath": "./test.jpg",
+    "link": "https://github.com/abdelhakmireda/ObjectStorageS3.git"
   },
   {
-    "Project_title": "Projet 2",
-    "category": "Javascript",
-    "languages": ["React Native", "JavaScript"],
-    "imagePath": "./test.jpg"
+    "Project_title": "Projet OpenStack",
+    "category": "Cloud Privé (OpenStack)",
+    "languages": ["Centos", "OpenStack"],
+    "description": "Projet lié à OpenStack pour le cloud privé.",
+    "imagePath": "./test.jpg",
+    "link": "https://github.com/abdelhakmireda/ObjectStorageS3.git"
   },
   {
-    "Project_title": "Projet 3",
-    "category": "Web",
-    "languages": ["React", "JavaScript", "Node.js"],
-    "imagePath": "./test.jpg"
+    "Project_title": "ObjectStorageS3",
+    "category": "ObjectStorageS3",
+    "languages": ["MinIO", "Docker", "AWS", "FileSystem"],
+    "description": "Application de gestion d'objets avec MinIO et EasyAdmin.",
+    "imagePath": "./test.jpg",
+    "link": "https://github.com/abdelhakmireda/ObjectStorageS3.git"
   },
   {
-    "Project_title": "Projet 4",
-    "category": "Reactjs",
-    "languages": ["Python", "NumPy", "Pandas"],
-    "imagePath": "./test.jpg"
+    "Project_title": "Gestion d'Examens",
+    "category": "dev",
+    "languages": ["Symfony", "Easyadmin 4", "Twig", "API Platform"],
+    "description": "Création d'une application web pour la gestion d'examens.",
+    "imagePath": "./test.jpg",
+    "link": "https://github.com/abdelhakmireda/gestion_examen_easyadmin.git"
   },
   {
-    "Project_title": "Projet 5",
-    "category": "Reactjs",
-    "languages": ["Arduino", "C++"],
-    "imagePath": "./test.jpg"
+    "Project_title": "Portfolio",
+    "category": "dev",
+    "languages": ["ReactJS", "HTML", "CSS"],
+    "description": "Portfolio personnel développé avec ReactJS, HTML et CSS.",
+    "imagePath": "./test.jpg",
+    "link": "https://github.com/abdelhakmireda/portfolio.git"
   },
+  {
+    "Project_title": "Oveterinaire Interakt Agency",
+    "category": "dev",
+    "languages": ["Symfony ", "Twig ", "HTML", "CSS"],
+    "description": "Application web pour une agence vétérinaire.",
+    "imagePath": "./test.jpg",
+    "link": "privé"
+  },
+  {
+    "Project_title": "Gestion des Ordinateurs Portables",
+    "category": "dev",
+    "languages": [ "Symfony 6", "Easyadmin 4", "Twig",  "API Platform"],
+    "description": "Création d'une application web pour la gestion des ordinateurs portables.",
+    "imagePath": "./test.jpg",
+    "link": "privé"
+  },
+  {
+    "Project_title": "Gestion de Transport Scolaire",
+    "category": "dev",
+    "languages": ["Symfony 6", "Easyadmin 4", "Twig", "API Platform"],
+    "description": "Création d'une application web pour la gestion du transport scolaire.",
+    "imagePath": "./test.jpg",
+    "link": "privé"
+  }
 ];
 
-function main() {
+function Main() {
   const [currentActive, setcurrentActive] = useState("all");
   const [arr, setarr] = useState(myProjets);
+
   const handleClick = (buttonCategory) => {
     const lowerCaseCategory = buttonCategory.toLowerCase();
     setcurrentActive(lowerCaseCategory);
     if (lowerCaseCategory === "all") {
-      // Si le bouton "All Projects" est cliqué, réinitialiser arr avec myProjets
       setarr(myProjets);
+    } else if (lowerCaseCategory === "web development") {
+      const newArr = myProjets.filter((item) => item.category.toLowerCase() === 'dev');
+      setarr(newArr);
+    } else if (lowerCaseCategory === "cloud privé (openstack)") {
+      const newArr = myProjets.filter((item) => item.category.toLowerCase() === 'cloud privé (openstack)');
+      setarr(newArr);
+    } else if (lowerCaseCategory === "projets privés") {
+      const newArr = myProjets.filter((item) => item.link === 'privé');
+      setarr(newArr);
     } else {
-      // Sinon, filtrer les projets en fonction de la catégorie
-      const newArr = myProjets.filter((item) => {
-        // Convertir la catégorie en minuscules pour ignorer la casse
-        return item.category.toLowerCase() === lowerCaseCategory;
-      });
+      const newArr = myProjets.filter((item) => item.category.toLowerCase() === lowerCaseCategory);
       setarr(newArr);
     }
   };
@@ -57,42 +96,59 @@ function main() {
   return (
     <main className='flex'>
       <section className='left-section flex'>
-        <button onClick={() => { setcurrentActive("all") }} className={currentActive === 'all' ? 'active' : null}>All Projects</button>
-        <button onClick={() => { handleClick("css") }} className={currentActive === 'css' ? 'active' : null}>HTML & CSS</button>
-        <button onClick={() => { handleClick("Javascript") }} className={currentActive === 'Javascript' ? 'active' : null}>Javascript</button>
-        <button onClick={() => { handleClick("Reactjs") }} className={currentActive === 'Reactjs' ? 'active' : null}>Reactjs</button>
+        <button onClick={() => { handleClick("all") }} className={currentActive === 'all' ? 'active' : null}>All Projects</button>
+        <button onClick={() => { handleClick("Web Development") }} className={currentActive === 'Web Development' ? 'active' : null}>Web Development</button>
+        <button onClick={() => { handleClick("Virtualisation") }} className={currentActive === 'Virtualisation' ? 'active' : null}> Virtualisation</button>
+        <button onClick={() => { handleClick("Cloud Privé (OpenStack)") }} className={currentActive === 'Cloud Privé (OpenStack)' ? 'active' : null}>Cloud Privé (OpenStack)</button>
+        <button onClick={() => { handleClick("Projets Privés") }} className={currentActive === 'Projets Privés' ? 'active' : null}>Projets Privés</button>
       </section>
       <section className='flex right-section'>
         <AnimatePresence>
-          {arr.map((item) => {
-            return (
-              <motion.article
-                layout
-                initial={{ transform: "scale(0)" }}
-                animate={{ transform: "scale(1)" }}
-                transition={{type:"spring",damping:8,stiffness:50}}
-                key={item.imagePath} className='card'>
-                <img src={item.imagePath} alt="" loading="lazy" />
-                <div className='box'>
-                  <h1 className='title'>{item.Project_title}</h1>
-                  <p className='subtitle'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In obcaecati labore quos perferendis perspiciatis dicta consequatur fuga porro. Adipisci fuga consequatur excepturi quae necessitatibus quisquam illo ipsa ipsum. Aperiam, mollitia.</p>
-                  <div className="flex icons">
-                    <div className='flex'>
-                      <div className="icon-link"></div>
-                      <div className='icon-github'></div>
-                    </div>
+          {arr.map((item) => (
+            <motion.article
+              layout
+              initial={{ transform: "scale(0)" }}
+              animate={{ transform: "scale(1)" }}
+              transition={{ type: "spring", damping: 8, stiffness: 50 }}
+              key={item.Project_title}
+              className='card'>
+              <img src={item.imagePath} alt={item.Project_title} loading="lazy" />
+              <div className='box'>
+                <h1 className='title'>{item.Project_title}</h1>
+                <p className='subtitle'>{item.description}</p>
+                <div className="languages">
+                  <h3>Languages:</h3>
+                  <ul>
+                    {item.languages.map((language, index) => (
+                      <li key={index}>{language}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex icons">
+                  <div className='flex'>
+                    {item.link !== 'privé' ? (
+                      <a href={item.link} className="icon-github" id='icon' title='Github'> </a>
+                    ) : (
+                      <div className="icon-eye-blocked"></div>
+                    )}
+                    {item.link === 'privé' && (
+                      <button className="icon-private">Privé</button>
+                    )}
+                  </div>
+                  {item.link !== 'privé' && (
                     <a className="link flex" href="">
                       more <span className='icon-arrow-right'></span>
                     </a>
-                  </div>
+                  )}
                 </div>
-              </motion.article>
-            )
-          })}
+              </div>
+            </motion.article>
+          ))}
         </AnimatePresence>
       </section>
     </main>
-  )
+  );
 }
 
-export default main;
+export default Main;
+
