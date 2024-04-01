@@ -94,10 +94,17 @@ main section.right-section{
 div.flex{
     gap: 11px;
 }
-article.card img {
-    width: 266px;
+article.card {
+    height: 420px;
+    width: 300px;
 }
-div.box{
+
+article.card img {
+    height: 200px;
+    width: 100%;
+}
+
+div.box {
     width: 266px;
 }
 .card .icon-github, .card .icon-link{
@@ -143,3 +150,12 @@ div.box{
         font-size: 0.9rem;
        }
  }
+
+ .languages li {
+     list-style: none;
+     display: inline-block;
+     margin-right: 10px;
+    font-size: 0.8rem;
+    color: var(--color-subtitle);
+ }
+
