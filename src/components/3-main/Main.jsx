@@ -9,7 +9,7 @@ const myProjets = [
     "languages": ["Linux", "KVM", "Python", "Virtualisation"],
     "description": "Modélisation d'une application web pour l'administration d'un superviseur KVM.",
     "imagePath": "./fonts/images/kvm.jpg",
-    "link": "https://github.com/abdelhakmireda/ObjectStorageS3.git"
+    "link": "https://drive.google.com/drive/folders/1VbcCjeoxKXmhW9mQ9FifpUzzIXt0xNL-?usp=drive_link"
   },
   {
     "Project_title": "Projet OpenStack",
@@ -17,7 +17,7 @@ const myProjets = [
     "languages": ["Centos", "OpenStack"],
     "description": "Projet lié à OpenStack pour le cloud privé.création d'un cloud privé",
     "imagePath": "./fonts/images/openstack.jpg",
-    "link": "https://github.com/abdelhakmireda/ObjectStorageS3.git"
+    "link": "https://drive.google.com/drive/folders/11immGDhglc0IeCTaOVmbJGnXCyHNYwSJ?usp=drive_link"
   },
   {
     "Project_title": "ObjectStorageS3",
