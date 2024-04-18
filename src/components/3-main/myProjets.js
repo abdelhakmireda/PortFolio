@@ -1,32 +1,74 @@
-const myProjets = [
+export const myProjets = [
     {
-        "Project_title": "Projet 1",
-        "category": "css",
-        "languages": ["HTML", "CSS", "JavaScript"],
-        "imagePath": "./test.jpg"
+        "Project_title": "Hyperviseur KVM",
+        "category": "Virtualisation",
+        "languages": ["Linux", "KVM", "Python", "Virtualisation"],
+        "description": "Modélisation d'une application web pour l'administration d'un superviseur KVM.",
+        "imagePath": "./fonts/images/kvm.jpg",
+        "link": "https://drive.google.com/drive/folders/1VbcCjeoxKXmhW9mQ9FifpUzzIXt0xNL-?usp=drive_link"
     },
     {
-        "Project_title": "Projet 2",
-        "category": "Javascript",
-        "languages": ["React Native", "JavaScript"],
-        "imagePath": "./test.jpg"
+        "Project_title": "Projet OpenStack",
+        "category": "Cloud Privé (OpenStack)",
+        "languages": ["Centos", "OpenStack"],
+        "description": "Projet lié à OpenStack pour le cloud privé.création d'un cloud privé",
+        "imagePath": "./fonts/images/openstack.jpg",
+        "link": "https://drive.google.com/drive/folders/11immGDhglc0IeCTaOVmbJGnXCyHNYwSJ?usp=drive_link"
     },
     {
-        "Project_title": "Projet 3",
-        "category": "Web",
-        "languages": ["React", "JavaScript", "Node.js"],
-        "imagePath": "./test.jpg"
+        "Project_title": "ObjectStorageS3",
+        "category": "ObjectStorageS3",
+        "languages": ["MinIO", "Docker", "AWS", "FileSystem"],
+        "description": "Application de gestion d'objets avec MinIO et EasyAdmin.",
+        "imagePath": "./fonts/images/objectstorages3.jpg",
+        "link": "https://github.com/abdelhakmireda/ObjectStorageS3.git"
     },
     {
-        "Project_title": "Projet 4",
-        "category": "Reactjs",
-        "languages": ["Python", "NumPy", "Pandas"],
-        "imagePath": "./test.jpg"
+        "Project_title": "Gestion d'Examens",
+        "category": "dev",
+        "languages": ["Symfony", "Easyadmin 4", "Twig", "API Platform"],
+        "description": "Création d'une application web pour la gestion d'examens.",
+        "imagePath": "./fonts/images/Gestionexamen.png",
+        "link": "https://github.com/abdelhakmireda/gestion_examen_easyadmin.git"
     },
     {
-        "Project_title": "Projet 5",
-        "category": "Reactjs",
-        "languages": ["Arduino", "C++"],
-        "imagePath": "./test.jpg"
+        "Project_title": "Portfolio",
+        "category": "dev",
+        "languages": ["ReactJS", "HTML", "CSS"],
+        "description": "Portfolio personnel développé avec ReactJS, HTML et CSS.",
+        "imagePath": "./fonts/images/portefolio.png",
+        "link": "https://github.com/abdelhakmireda/portfolio.git"
     },
+    {
+        "Project_title": "Application Ecommerce Vente de Cours",
+        "category": "dev",
+        "languages": ["Nextjs", "Strapi", "Stripe", "Hyperui", "Cloudinary", "Clerk"],
+        "description": "Création d'une application pour web la vente des cours et formation en ligne ",
+        "imagePath": "./fonts/images/E-Learning.jpg",
+        "link": "https://github.com/abdelhakmireda/store-cours.git"
+    },
+    {
+        "Project_title": "Oveterinaire ",
+        "category": "dev",
+        "languages": ["Symfony ", "Twig ", "HTML", "CSS"],
+        "description": "Application web pour les vétérinaires , conçut et developer pour interakt agency .",
+        "imagePath": "./fonts/images/oveterinaire.jpg",
+        "link": "privé"
+    },
+    {
+        "Project_title": "Gestion des Ordinateurs ",
+        "category": "dev",
+        "languages": ["Symfony", "Easyadmin", "Twig", "API Platform"],
+        "description": "Création d'une application web pour la gestion des ordinateurs portables.",
+        "imagePath": "./fonts/images/laptopmanagement.jpg",
+        "link": "privé"
+    },
+    {
+        "Project_title": "Gestion de Transport ",
+        "category": "dev",
+        "languages": ["Symfony", "Easyadmin", "Twig", "API Platform"],
+        "description": "Création d'une application web pour la gestion du transport scolaire.",
+        "imagePath": "./fonts/images/managementtransport.jpg",
+        "link": "privé"
+    }
 ];
