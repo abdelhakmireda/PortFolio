@@ -62,7 +62,7 @@ function Main() {
                 <div className="flex icons">
                   <div className='flex'>
                     {item.link !== 'privé' ? (
-                      <a href={item.link} className="icon-github" id='icon' title='Github'> </a>
+                      <a href={item.link} target='_blank' className="icon-github" id='icon' title='Github'> </a>
                     ) : (
                       <div className="icon-eye-blocked"></div>
                     )}
