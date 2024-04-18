@@ -71,7 +71,7 @@ function Main() {
                     )}
                   </div>
                   {item.link !== 'privé' && (
-                    <a className="link flex" href="">
+                    <a className="link flex" target='_blank' href="">
                       more <span className='icon-arrow-right'></span>
                     </a>
                   )}
