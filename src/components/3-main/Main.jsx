@@ -44,6 +44,14 @@ const myProjets = [
     "link": "https://github.com/abdelhakmireda/portfolio.git"
   },
   {
+    "Project_title": "Application Ecommerce Vente de Cours",
+    "category": "dev",
+    "languages": ["Nextjs", "Strapi", "Stripe", "Hyperui", "Cloudinary", "Clerk"],
+    "description": "Création d'une application pour web la vente des cours et formation en ligne ",
+    "imagePath": "./fonts/images/E-Learning.jpg",
+    "link": "https://github.com/abdelhakmireda/store-cours.git"
+  },
+  {
     "Project_title": "Oveterinaire ",
     "category": "dev",
     "languages": ["Symfony ", "Twig ", "HTML", "CSS"],
@@ -54,7 +62,7 @@ const myProjets = [
   {
     "Project_title": "Gestion des Ordinateurs ",
     "category": "dev",
-    "languages": [ "Symfony", "Easyadmin", "Twig",  "API Platform"],
+    "languages": ["Symfony", "Easyadmin", "Twig", "API Platform"],
     "description": "Création d'une application web pour la gestion des ordinateurs portables.",
     "imagePath": "./fonts/images/laptopmanagement.jpg",
     "link": "privé"
