@@ -13,7 +13,7 @@ const Hero = () => {
         <div className='parent-avatar flex'>
           <motion.img
             initial={{ transform: "scale(0)" }}
-            animate={{ transform: "scale(1.1)" }}
+            animate={{ transform: "scale(1.2)" }}
             transition={{ damping: 6, type: "spring", stiffness: 100 }}
             src="./profile.png" className='avatar' alt="" loading="lazy" /> {/* Ajout de loading="lazy" pour le chargement paresseux */}
           <div className='icon-verified'></div>

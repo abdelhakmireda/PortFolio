@@ -33,6 +33,7 @@ html{
 --color-bgheader: rgb(253, 253, 253);
 --color-bleu: rgb(0, 149, 246);
 --color-icons-hover: #333; 
+--color-profile-image:#ffa600f6;
 }
  body{
   background: var(--primary-color);
@@ -124,6 +125,10 @@ html{
    background-color: rgba(25, 118, 210);
   }
   
+  .light .scrole-to-top ,.light .scrole-to-top:hover{
+   background-color: var(--color-profile-image);
+  }
+
   @media (max-width:1000px) {
      .container {
       --container-padding:1.7rem
