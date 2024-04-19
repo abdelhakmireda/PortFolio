@@ -32,9 +32,10 @@ header ul.flex {
 header ul li a {
     color: var(--color-title);
     opacity: 0.8;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 700;
     position: relative;
+    letter-spacing: 2px;
 }
 
 header ul li a {
@@ -44,7 +45,7 @@ header ul li a {
 header ul li a:hover {
     color: var(--color-bleu);
     opacity: 1;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 }
 
 header ul li a::after {
