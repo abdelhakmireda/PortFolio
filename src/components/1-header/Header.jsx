@@ -5,43 +5,41 @@ const Header = () => {
   const [showModal, setshowModal] = useState(false);
   const [theme, settheme] = useState(localStorage.getItem("currentMode") ?? "dark");
   useEffect(() => {
-    if(theme==="light"){
+    if (theme === "light") {
       document.body.classList.remove("dark");
       document.body.classList.add("light");
-    }else{
+    } else {
       document.body.classList.remove("light");
       document.body.classList.add("dark");
     }
-   
-  },[theme]);
+
+  }, [theme]);
   return (
     <header className='flex'>
-      <button onClick={() => { setshowModal(true) }} className='menu icon-menu'/>
+      <button onClick={() => { setshowModal(true) }} className='menu icon-menu' />
       <div />
       <nav>
         <ul className='flex'>
-          <li><a  href="#hero">About</a></li>
+          <li><a href="#hero">About</a></li>
           <li><a href="#main">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button  onClick={() => { 
+      <button onClick={() => {
         //send value to  ls
-        localStorage.setItem("currentMode",theme==="dark"?"light":"dark")
+        localStorage.setItem("currentMode", theme === "dark" ? "light" : "dark")
         //get value to  ls
         settheme(localStorage.getItem("currentMode"))
-      }}  className='mode flex'>
+      }} className='mode flex'>
         {theme === "dark" ? (<span className='icon-moon-o'></span>) : (<span className='icon-sun'></span>)}
       </button>
       {showModal && (
         <div className='fixed '>
           <ul className='modal'>
-            <li><button className="icon-close" onClick={() => { setshowModal(false)  }}/></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Article</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Formation</a></li>
-            <li><a href="">Uses</a></li>
+            <li><button className="icon-close" onClick={() => { setshowModal(false) }} /></li>
+            <li><a href="#hero">About</a></li>
+            <li><a href="#main">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       )}
