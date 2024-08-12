@@ -24,6 +24,14 @@ export const myProjets = [
         "link": "https://github.com/abdelhakmireda/ObjectStorageS3.git"
     },
     {
+        "Project_title": "Symfony 6.4.* Docker ",
+        "category": "dev",
+        "languages": ["Docker", "Mysql", "Apache", "Php8.1", "Symfony Cli"],
+        "description": "Installation et Configuration de Docker pour Symfony 6.4 (LTS) .",
+        "imagePath": "./fonts/images/docker-symfony.jpg",
+        "link": "https://github.com/abdelhakmireda/Environnement-D-veloppement-Docker-Symfony.git"
+    },
+    {
         "Project_title": "Gestion d'Examens",
         "category": "dev",
         "languages": ["Symfony", "Easyadmin 4", "Twig", "API Platform"],
