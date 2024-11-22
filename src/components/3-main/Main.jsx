@@ -46,7 +46,8 @@ function Main() {
               animate={{ transform: "scale(1)" }}
               transition={{ type: "spring", damping: 8, stiffness: 50 }}
               key={item.Project_title}
-              className='card'>
+              className='card'
+              onClick={() => window.location.href = item.link}>
               <img src={item.imagePath} alt={item.Project_title} loading="lazy" />
               <div className='box'>
                 <h1 className='title'>{item.Project_title}</h1>
